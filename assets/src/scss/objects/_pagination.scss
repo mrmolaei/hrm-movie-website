@@ -1,0 +1,21 @@
+.o-pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.o-pagination .page-numbers {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 8px 12px;
+  background: #f3f3f3;
+  color: $gray;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:visited {
+    color: $gray;
+  }
+}
+.o-pagination .page-numbers.current {
+  background: #333;
+  color: #fff;
+}

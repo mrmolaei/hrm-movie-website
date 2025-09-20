@@ -1,0 +1,49 @@
+.c-movie {
+  position: relative;
+}
+
+.c-movie__thumbnail {
+  position: relative;
+  padding-top: 141.44%;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.c-movie__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.c-movie__title {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.c-movie__en-name {
+  font-size: 12px;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  color: $light-gray;
+}
+
+.c-movie__release {
+  font-size: 10px;
+  line-height: 1.25;
+  color: $light-gray;
+}
+
+.c-movie__excerpt {
+  font-size: 13px;
+  line-height: 1.4;
+}

@@ -1,0 +1,23 @@
+.o-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  align-items: start;
+
+  @include mq(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(laptop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mq(desktop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.o-grid__no-item {
+  width: 100%;
+  background-color: #242629;
+}

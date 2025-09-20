@@ -1,28 +1,47 @@
 <?php
 get_header();
+
+// Get current page number
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+$posts_per_page = get_option( 'posts_per_page' );
+
+$movies = new WP_Query( array(
+    'post_type'      => 'movie',
+    'posts_per_page' => $posts_per_page,
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+    'paged'          => $paged, // <-- important for pagination
+) );
 ?>
-    <div id="primary" class="o-content-area">
-        <main class="o-site-main" >
 
+<div id="primary" class="o-content-area">
+    <div class="o-container">
+        <main class="o-site-main">
+            <div class="o-grid">
+                <?php
+                if ( $movies->have_posts() ) :
+
+                    while ( $movies->have_posts() ) : $movies->the_post();
+                        get_template_part( 'template-parts/content', 'movie' );
+                    endwhile;
+
+                    wp_reset_postdata();
+                else :
+                    echo '<p class="o-grid__no-item">هیچ فیلمی پیدا نشد.</p>';
+                endif;
+                ?>
+            </div>
             <?php
-            if ( have_posts() ) :
-
-                while ( have_posts() ) : the_post();
-
-                    get_template_part( 'template-parts/content', get_post_type() );
-
-                endwhile;
-
-                the_posts_navigation();
-
-            else :
-                get_template_part( 'template-parts/content', 'none' );
-
-            endif;
+            echo '<div class="o-pagination">';
+            echo paginate_links( array(
+                'total'   => $movies->max_num_pages,
+                'current' => $paged,
+                'mid_size' => 2,
+                'prev_text' => __('« صفحه قبلی'),
+                'next_text' => __('صفحه بعدی »'),
+            ) );
+            echo '</div>';
             ?>
-
         </main>
     </div>
-<?php
-get_footer();
-?>
+</div>

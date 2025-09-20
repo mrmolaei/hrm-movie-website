@@ -1,0 +1,76 @@
+.o-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 2rem);
+
+  @include mq(tablet) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    max-width: calc(100% - 4rem);
+  }
+
+  @include mq(laptop) {
+    padding: 0;
+    max-width: 950px;
+  }
+
+  @include mq(desktop) {
+    max-width: 1120px;
+  }
+
+  @include mq(wide) {
+    max-width: 1240px;
+  }
+}
+
+.o-container-xl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: calc(100% - 2rem);
+
+  @include mq(tablet) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    max-width: calc(100% - 4rem);
+  }
+
+  @include mq(laptop) {
+    padding: 0;
+    max-width: 980px;
+  }
+
+  @include mq(desktop) {
+    max-width: 1220px;
+  }
+
+  @include mq(wide) {
+    max-width: 1360px;
+  }
+}
+
+
+.o-container-xl--no-padding-m {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+
+  @include mq(tablet) {
+    max-width: 100%;
+  }
+
+  @include mq(laptop) {
+    padding: 0;
+    max-width: 980px;
+  }
+
+  @include mq(desktop) {
+    max-width: 1220px;
+  }
+
+  @include mq(wide) {
+    max-width: 1360px;
+  }
+}
