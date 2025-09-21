@@ -1,10 +1,14 @@
 <?php
 get_header();
 
-// Get current page number
+// Get current page number for pagination
+
 $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+// Get posts_per_page setting from WordPress admin (Settings → Reading)
 $posts_per_page = get_option( 'posts_per_page' );
 
+// Custom WP_Query to fetch movies
 $movies = new WP_Query( array(
     'post_type'      => 'movie',
     'posts_per_page' => $posts_per_page,
@@ -32,6 +36,7 @@ $movies = new WP_Query( array(
                 ?>
             </div>
             <?php
+            // Pagination
             echo '<div class="o-pagination">';
             echo paginate_links( array(
                 'total'   => $movies->max_num_pages,

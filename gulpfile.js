@@ -9,6 +9,7 @@ const babel = require('@rollup/plugin-babel').babel;
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
+const cleanCSS = require('gulp-clean-css');
 const commonjs = require('@rollup/plugin-commonjs');
 const { terser } = require('rollup-plugin-terser');
 
@@ -40,6 +41,7 @@ function buildEditorStyles() {
 function concatCss() {
     return src(config.distSrcCss + '/**/*.css') // Adjusted to use compiled CSS
         .pipe(concat('main.css'))
+        .pipe(cleanCSS())
         .pipe(dest(config.distCss))
         .pipe(browserSync.stream());
 }
