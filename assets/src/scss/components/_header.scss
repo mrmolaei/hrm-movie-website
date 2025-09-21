@@ -2,3 +2,60 @@
   padding: 8px 0;
   background-color: $gray;
 }
+
+.c-header__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq(laptop) {
+    justify-content: flex-start;
+  }
+}
+
+.c-header__links {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+
+  @include mq(laptop) {
+    margin-right: auto;
+  }
+}
+
+.c-header__menu {
+  display: none;
+
+  @include mq(laptop) {
+    display: initial;
+  }
+}
+
+.c-header__links__expander {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(laptop) {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.c-header__mobile-menu {
+  width: 72px;
+
+  @include mq(laptop) {
+    display: none;
+  }
+}
+
+.c-header__menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}

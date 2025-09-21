@@ -1,0 +1,66 @@
+.c-btn {
+  padding: 14px 16px;
+  background-color: $gray;
+  color: $white;
+  text-decoration: none;
+}
+
+.c-btn--sm {
+  background-color: $bg;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.12s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-header__links {
+  .c-btn {
+    display: none;
+
+    @include mq(laptop) {
+      display: inline-flex;
+    }
+  }
+
+  .c-btn--m-visible{
+    display: inline-flex;
+    order: -1;
+    background-color: transparent;
+
+    @include mq(laptop) {
+      order: 0;
+      background-color: $bg;
+    }
+  }
+}
+
+.c-btn--player {
+  padding: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.c-btn--red {
+  background-color: #AB070F99;
+}
+
+.c-btn--orange {
+  padding: 12px 11px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #FB7800;
+  border: 1px solid #FB7800;
+  border-radius: 6px;
+  white-space: nowrap;
+  background-color: #1B1C1F;
+}

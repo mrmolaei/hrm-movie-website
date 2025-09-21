@@ -47,3 +47,320 @@
   font-size: 13px;
   line-height: 1.4;
 }
+
+
+// Single movie
+.c-movie--single {}
+
+.c-movie__back {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+
+  .c-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+
+    span {
+      display: flex;
+    }
+  }
+}
+
+.c-movie__info {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.c-movie__res {
+  display: none;
+
+  @include mq(laptop) {
+    display: block;
+  }
+}
+
+.c-movie--single {
+  .c-movie__info {
+    width: 100%;
+
+    @include mq(laptop) {
+      width: auto;
+    }
+  }
+
+  .c-movie__title__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: right;
+    vertical-align: middle;
+    display: block;
+    margin-top: 8px;
+
+    @include mq(laptop) {
+      font-size: 28px;
+      line-height: 100%;
+      margin-top: 0;
+    }
+  }
+
+  .c-movie__title__subname {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    margin: 8px 0;
+    display: block;
+
+    @include mq(laptop) {
+      margin: 2px 0 0;
+    }
+  }
+}
+
+.c-movie__quality-switch {
+  display: none;
+
+  @include mq(laptop) {
+    display: initial;
+  }
+
+  .c-btn--switch {
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: IRANYekanX;
+
+    span {
+      display: flex;
+    }
+  }
+}
+
+.c-movie--single {
+  .c-movie__header {
+    padding: 8px 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    @include mq(laptop) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .c-movie__sidebar {
+    width: 100%;
+
+    @include mq(laptop) {
+      width: 32%;
+    }
+  }
+
+  .c-movie__rating {
+    display: flex;
+    margin-left: auto;
+
+    @include mq(laptop) {
+      margin-left: 0;
+    }
+  }
+
+  .c-movie__imdb {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    span {
+      font-weight: bold;
+    }
+
+    .c-movie__imdb__top {
+      font-size: 16px;
+      line-height: 24px;
+      opacity: 0.7;
+      font-weight: 400;
+
+      @include mq(laptop) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    .c-movie__imdb__rate {
+      font-size: 18pxpx;
+      line-height: 28px;
+
+      @include mq(laptop) {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.c-movie__links {
+  display: flex;
+  gap: 8px;
+  order: -1;
+  position: absolute;
+  top: -58px;
+
+  @include mq(laptop) {
+    order: 0;
+    position: static;
+    top: unset;
+  }
+
+  .c-btn--sm {
+    background-color: #242629 !important;
+  }
+}
+
+.c-movie--single .c-movie__main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+
+  @include mq(laptop) {
+    gap: 26px;
+    flex-wrap: nowrap;
+  }
+}
+
+.c-movie__player {
+  width: 100%;
+
+  @include mq(laptop) {
+    width: 66.8%;
+  }
+}
+
+.c-movie__player__img {
+  max-width: 100%;
+}
+
+.c-movie__player__bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mq(laptop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.c-movie__player__troubleshoot {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  order: -1;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 12px;
+
+  @include mq(laptop) {
+    margin: 0;
+    flex-grow: unset;
+    order: 0;
+    align-items: center;
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5.25px;
+    color: $light-gray;
+
+    .icon {
+
+      @include mq(laptop) {
+        display: none;
+      }
+    }
+  }
+}
+
+.c-movie__player__btns {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.c-movie__troubleshoot__btn {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 8px;
+  color: $white;
+  background-color: $gray;
+  border-radius: 4px;
+}
+
+.c-movie__player__vpn {
+  display: flex;
+  background-color: #2E2217;
+  gap: 8px;
+  min-height: 44px;
+  align-items: center;
+  padding: 2px;
+  border-radius: 8px;
+  margin-top: 24px;
+
+  @include mq(laptop) {
+    display: none;
+  }
+}
+
+.c-movie__player__vpn__icon {
+  background-color: #493018;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.c-movie__player__vpn__message {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  color: $white;
+}
+
+.c-movie__player__vpn__button {
+  min-width: 79px;
+}
+
+
+.c-movie__all-movies {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.12s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,26 @@
+.c-nav {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.s-nav {
+  li {
+
+  }
+
+  a {
+    padding: 10px 8px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color: $white;
+    transition: 0.12s;
+
+    &:hover {
+      background-color: $dark-gray;
+    }
+  }
+}

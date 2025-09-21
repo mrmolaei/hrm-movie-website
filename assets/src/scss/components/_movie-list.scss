@@ -1,0 +1,92 @@
+.c-movie--list {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+
+  .c-movie__cover {
+    width: 88px;
+    min-width: 88px;
+    height: 122px;
+    position: relative;
+
+    & > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .c-movie__cover__badges {
+      display: flex;
+      gap: 2px;
+      position: absolute;
+      left: 4px;
+      bottom: 4px;
+    }
+  }
+
+  .c-movie__content {
+    flex-grow: 1;
+  }
+
+  .c-movie__info-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .c-movie__rate {
+    display: flex;
+    gap: 2px;
+  }
+
+  .c-movie__rate__total, .c-movie__rate__score {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .c-movie__rate__total {
+    opacity: 0.7;
+    font-size: 13px;
+    margin-left: 2px;
+  }
+
+  .c-movie__rate__score {
+    font-weight: 700;
+  }
+
+  .c-movie__release {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: $white;
+    opacity: 1;
+  }
+
+  .c-movie__info-grid--ratings {
+    margin-top: 8px;
+  }
+
+  .c-movie__imdb {
+
+    .c-movie__imdb__top {
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .c-movie__imdb__rate {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
